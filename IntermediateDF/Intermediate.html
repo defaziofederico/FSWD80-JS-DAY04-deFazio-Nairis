@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>A Website</title>
+    <style>
+    body {
+        background-color: lightblue;
+    }
+
+    img {
+        width: 55%;
+        height: 50%;
+    }
+    </style>
+    <!--Intermediate exercise 1 | Hotels
+
+
+Create three objects of type hotel. Each of them shares some properties and methods. The user should be able to insert a number of nights for each hotel and get back results, whether the hotel is available or not (for some number of nights). For each hotel generate random integers from 1-10 that store available nights. If the hotel is available, provide a button labeled "I'll reserve" otherwise provide a message with text "Sorry, no free room for <number_of_nights> nights".
+
+Try to style the program with the colors #003580, #FFFFFF and #E9F0FA. -->
+</head>
+
+<body>
+    <div>
+        <img src="manda.jpg" alt="manda">
+        <h1>Are you Manda enough?</h1>
+    </div>
+    <script>
+    var nights = prompt("Please enter number of nights");
+
+    function HotelConstructor(name, rooms) {
+        this.name = name;
+        this.rooms = rooms;
+        this.booked = Math.floor(Math.random() * 9);
+        this.checkAvailability =
+            function() {
+
+                return (this.rooms - this.booked);
+            }
+
+        this.print =
+            function() {
+                if 
+               		(nights < 10) {
+                    document.write("The room is available!");
+                } else {
+                    document.write("Sorry, you have to search for another hotel!");
+                };
+            };
+    		}
+    var mandaHotel = new HotelConstructor('Manda', '100');
+    mandaHotel.checkAvailability();
+    // mandaHotel.print();
+    console.log(mandaHotel.checkAvailability());
+    console.log(mandaHotel.booked);
+    // var tandaHotel = new HotelConstructor('Tanda', '200');
+    // 	tandaHotel.checkAvailability();
+    // tandaHotel.print();	
+    // var sandaHotel = new HotelConstructor('Sanda', '300');
+    // 	sandaHotel.checkAvailability();
+    // sandaHotel.print();
+
+
+    // document.write(mandaHotel.checkAvailability());
+    // document.write(sandaHotel.checkAvailability());
+    // document.write(tandaHotel.checkAvailability());
+    </script>
+</body>
+
+</html>
